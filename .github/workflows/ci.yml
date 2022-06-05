@@ -18,12 +18,18 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm test
-          
+    
   deployment:
-    name: Push my CHT app to staging
-    uses: 'medic/cht-core/deploy-with-medic-conf@master'
-    with:
-      directory: '.'
-      hostname: myapp.staging.company.org
-      username: ${{ secrets.STAGING_USERNAME }}
-      password: ${{ secrets.STAGING_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+      - name: Push my CHT app to staging
+        uses: 'medic/cht-core/deploy-with-medic-conf@master'
+        with:
+          directory: '.'
+          hostname: myapp.staging.company.org
+          username: ${{ secrets.STAGING_USERNAME }}
+          password: ${{ secrets.STAGING_PASSWORD }}
