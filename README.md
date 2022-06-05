@@ -1,5 +1,5 @@
-##Intro
+## Intro
 Trying out github actions on cht configurations
 
-##Source
+## Source
 https://github.com/medic/cht-core/config/covid-19 
