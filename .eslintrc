@@ -1,15 +1,28 @@
 {
   "extends": "@medic/eslint-config",
-  "plugins": ["json"],
+  "plugins": [
+    "json"
+  ],
   "env": {
     "es6": true,
     "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
   },
   "rules": {
     "max-len": "off",
     "no-console": "off",
     "no-debugger": "off",
-    "quotes": ["error", "single", { "allowTemplateLiterals": true, "avoidEscape": true }]
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ]
   },
   "globals": {
     "contact": true,
