@@ -1,5 +1,5 @@
 {
-  "extends": ["@medic"],
+  "extends": "@medic/eslint-config",
   "plugins": ["json"],
   "env": {
     "es6": true,
